@@ -1,10 +1,10 @@
-import streamlit as st
-import pandas as pd
 import os
+import pandas as pd
+import streamlit as st
 import glob
 import plotly.graph_objects as go
 
-# ✅ 현재 위치 기준으로 data 경로 설정
+# ✅ 현재 파일(app.py) 기준 절대 경로로 data 폴더 접근
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
