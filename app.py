@@ -4,8 +4,9 @@ import os
 import glob
 import plotly.graph_objects as go
 
-# ✅ GitHub 기준 상대경로로 수정
-DATA_DIR = "data"
+# ✅ 현재 위치 기준으로 data 경로 설정
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
 
 def load_data(directory):
     files = glob.glob(os.path.join(directory, "*_집계버전.csv"))
