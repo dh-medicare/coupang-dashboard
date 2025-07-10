@@ -24,7 +24,12 @@ def load_data(directory):
 st.set_page_config(page_title="일별 데이터 분석 대시보드", layout="wide")
 st.title("📊 일별 상품별 데이터 분석 대시보드")
 
+# 🔄 새로고침 버튼 추가
+if st.button("🔄 데이터 새로고침"):
+    st.cache_data.clear()
+    st.experimental_rerun()
 df = load_data(DATA_DIR)
+
 if df.empty:
     st.warning("❗ 집계 데이터가 없습니다. 먼저 create_summary.py를 실행해주세요.")
     st.stop()
