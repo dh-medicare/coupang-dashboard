@@ -1,12 +1,11 @@
-# 🔻 이 부분은 기존 코드와 동일하게 유지
 import streamlit as st
 import pandas as pd
 import os
 import glob
 import plotly.graph_objects as go
 
-# 📁 집계 데이터 위치
-DATA_DIR = os.path.expanduser("~/Desktop/coupang insight/집계버전")
+# ✅ GitHub 기준 상대경로로 수정
+DATA_DIR = "data"
 
 def load_data(directory):
     files = glob.glob(os.path.join(directory, "*_집계버전.csv"))
