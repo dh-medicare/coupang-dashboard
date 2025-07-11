@@ -26,11 +26,11 @@ st.title("📊 일별 상품별 데이터 분석 대시보드")
 
 # 🔄 새로고침 버튼 추가
 if st.button("🔄 데이터 새로고침"):
-    st.cache_data.clear()
     try:
-    st.rerun()
-except AttributeError:
-    st.experimental_rerun()
+        st.rerun()
+    except AttributeError:
+        st.experimental_rerun()
+
 df = load_data(DATA_DIR)
 
 if df.empty:
