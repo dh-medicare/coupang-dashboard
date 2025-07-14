@@ -3,6 +3,10 @@ import pandas as pd
 import streamlit as st
 import glob
 import plotly.graph_objects as go
+from streamlit_autorefresh import st_autorefresh
+
+# ⏰ 자동 새로고침 (예: 5분마다 = 300,000 밀리초)
+st_autorefresh(interval=300000, key="data_refresh")
 
 # ✅ 현재 파일(app.py) 기준 절대 경로로 data 폴더 접근
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
